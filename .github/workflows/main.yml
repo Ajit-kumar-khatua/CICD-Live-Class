@@ -24,33 +24,33 @@
 #on push on pr request
 
 
-# name: My Application
-# on: 
-#   push: 
-#     branches: [master]
+name: My Application
+on: 
+  push: 
+    branches: [master]
 
-# jobs: 
-#    build: 
-#     runs-on: windows-latest
-#     steps: 
-#       -uses: actions/checkout@v3
-#       -name: Print node version
-#         run: node --version
-#       -name: Print NPM version
-#         run: npm --version 
+jobs: 
+   build: 
+    runs-on: windows-latest
+    steps: 
+      -uses: actions/checkout@v3
+      -name: Print node version
+        run: node --version
+      -name: Print NPM version
+        run: npm --version 
 
 
-name: Print Node Version
-on: push
-jobs:
-  print-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-      - name: Print Node Version
-        run: node -v
+# name: Print Node Version
+# on: push
+# jobs:
+#   print-version:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Install Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14.x
+#       - name: Print Node Version
+#         run: node -v
 
 
