@@ -1,1 +1,41 @@
+# key:value
+
+
+# title: Website Name
+# description: A website for uploading content
+
+# #Array
+# tags: 
+#    - technology
+#    - image
+
+# #objects
+
+# address: 
+#      street: Cuttack
+#      state: Odisha
+
+# #Github Actions
+#  value: ${{env.value}}
+
+
+#GitHub
+#triggered on certain events
+#on push on pr request
+
+
+name: My Application
+on: 
+  push: 
+    branches: [master]
+
+jobs: 
+   build: ubuntu-latest
+   steps: 
+      -uses: actions/checkout@v3
+      -name: Print node version
+        run: node --version
+      -name: Print NPM version
+        run: npm --version 
+
 
